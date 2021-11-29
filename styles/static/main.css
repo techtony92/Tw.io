@@ -1,0 +1,219 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  font-size: 1.6em;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  display: block;
+  max-width: 1300px;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+.primaryHeading {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.navBar {
+  width: 150px;
+  height: 100vh;
+  background: #4DAFC8;
+  color: #034D36;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navBarLogo {
+  position: relative;
+  width: 130px;
+  height: 200px;
+}
+
+.navBar--mobile {
+  background: #4DAFC8;
+  color: #034D36;
+  position: fixed;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .navBar--mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navBar--mobile .mobileMenu {
+    position: relative;
+    width: 6rem;
+    height: 8rem;
+    z-index: -5;
+    padding: 1rem;
+  }
+  .navBar--mobile .mobileMenuToggle {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  .navBar--mobile .mobileMenuToggle:checked + .navBar--mobile .mobileMenuHamburger::before {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .navBar--mobile .mobileMenuToggle:checked + .navBar--mobile .mobileMenuHamburger::after {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .navBar--mobile .mobileMenuHamburger {
+    position: relative;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #023D2B;
+  }
+  .navBar--mobile .mobileMenuHamburger::before, .navBar--mobile .mobileMenuHamburger::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #35705E;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .navBar--mobile .mobileMenuHamburger::before {
+    top: 12px;
+    left: 0;
+  }
+  .navBar--mobile .mobileMenuHamburger::after {
+    bottom: 10px;
+    left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .navBar--mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .navBar {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .navBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.canvasParent {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: -8;
+}
+
+.canvasParent .primaryCanvas {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.nextPortrait {
+  position: relative;
+}
+
+.landing {
+  height: 100vh;
+  position: relative;
+  z-index: -10;
+  overflow-x: hidden;
+  background: #2019a1;
+  background: linear-gradient(300deg, #2019a1 8%, #2710ac 24%, #1440dd 40%, #1b3cb3 50%, #1440dd 60%, #2710ac 76%, #2019a1 89%);
+}
+
+.landing .space {
+  height: 500px;
+  padding: 300px 0;
+  margin-bottom: 200px;
+}
+
+@media (min-width: 768px) {
+  .landing .decorLogoReact {
+    top: -650px;
+    height: 600px;
+    width: 850px;
+    left: 370px;
+  }
+}
+
+@media (min-width: 768px) {
+  .landing .mainTitle {
+    position: absolute;
+    top: 20rem;
+    color: #61DAFB;
+    font-size: 5rem;
+    font-weight: 400;
+  }
+}
+/*# sourceMappingURL=main.css.map */

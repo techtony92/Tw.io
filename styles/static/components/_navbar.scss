@@ -1,0 +1,83 @@
+.navBar{
+    width:150px;
+    height:100vh;
+    background:$primaryColor_Crayola_Sky_Blue--Shade;
+    color:$secondaryColor_Dark_Green;
+    position: fixed;
+    @include flex(column, center, center);
+    &Logo{
+        position: relative;
+        width:130px;
+        height:200px;
+    }
+    &--mobile{
+        background:$primaryColor_Crayola_Sky_Blue--Shade;
+        color:$secondaryColor_Dark_Green;
+        position: fixed;
+        width:100%;
+        @include breakpoint-up(md){
+            @include flex(row, space-around, center);
+            .mobileMenu{
+                position: relative;
+                width:6rem;
+                height:8rem;
+                z-index: -5;
+                padding:1rem;
+                &Toggle{
+                    position: absolute;
+                    z-index: -1;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:100%;
+                    opacity: 0;
+                }
+                &Toggle:checked + &Hamburger::before{
+                      transform: rotate(90deg);
+                }
+                &Toggle:checked + &Hamburger::after{
+                      transform: rotate(90deg);
+                }
+               
+                &Hamburger{
+                    position: relative;
+                    top:20px;
+                    left:0;
+                    width:100%;
+                    border:none;
+                    border-bottom:2px solid $secondaryColor_Dark_Green--shade;
+                    
+                }
+                &Hamburger::before,
+                &Hamburger::after{
+                    content:"";
+                    position: absolute;
+                    width:100%;
+                    border:none;
+                    border-bottom:2px solid $secondaryColor_Dark_Green-Tint;
+                    transition: all 0.4s ease;
+                }
+                &Hamburger::before{
+                    top:12px;
+                    left:0;
+                }
+                &Hamburger::after{
+                    bottom:10px;
+                    left:0;
+                }
+                
+                
+            }
+        }
+        @include breakpoint-up(lg){
+            display:none;
+        }
+
+    }
+    @include breakpoint-up(md){
+        display:none;
+    }
+    @include breakpoint-up(lg){
+            @include flex(column, center, center);
+    }
+}

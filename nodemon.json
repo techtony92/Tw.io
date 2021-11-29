@@ -1,0 +1,6 @@
+{
+    "verbose": true,
+    "ignore": ["node_modules", ".next"],
+    "watch": ["pages/**/*", "index.js", "styles/**/*", "main.css"],
+    "ext": "js json scss css"
+}

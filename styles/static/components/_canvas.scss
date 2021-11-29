@@ -1,0 +1,12 @@
+.canvasParent{
+    height:100vh;
+    width:100%;
+    position:relative;
+    z-index: -8;
+    .primaryCanvas{
+        position:absolute;
+        min-height:100%;
+        min-width:100%;
+    }
+   
+}
